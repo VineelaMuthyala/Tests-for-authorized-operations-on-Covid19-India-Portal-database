@@ -1,0 +1,69 @@
+### New User 
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{    
+    "username": "rahul123",
+    "password": "rahul@456",
+    "gender":"male",
+    "location":"hyderabad"
+}
+
+### Login API 1
+POST http://localhost:3000/login/ 
+Content-Type: application/json 
+
+{
+  "username": "rahul123",
+  "password": "rahul@456"
+}
+
+### API 2 GET STATES LIST
+GET http://localhost:3000/states/ 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwiaWF0IjoxNjg0Mjk2OTU5fQ.vQCDm6E0WunGe_fhkUniqugZ643AK4wLsh1GQ3L5Uqc
+
+
+### API 3 Get the state details ID given
+GET http://localhost:3000/states/1/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwiaWF0IjoxNjg0Mjk2OTU5fQ.vQCDm6E0WunGe_fhkUniqugZ643AK4wLsh1GQ3L5Uqc
+
+### API 4 Add new district to the district table
+POST http://localhost:3000/districts/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwiaWF0IjoxNjg0Mjk2OTU5fQ.vQCDm6E0WunGe_fhkUniqugZ643AK4wLsh1GQ3L5Uqc
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+
+### API 5 GET THE DISTRICT DETAILS BASED ON DISTRICT ID
+GET http://localhost:3000/districts/764
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwiaWF0IjoxNjg0Mjk2OTU5fQ.vQCDm6E0WunGe_fhkUniqugZ643AK4wLsh1GQ3L5Uqc
+
+### API 6 Delete district
+DELETE http://localhost:3000/districts/765 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwiaWF0IjoxNjg0Mjk2OTU5fQ.vQCDm6E0WunGe_fhkUniqugZ643AK4wLsh1GQ3L5Uqc
+
+### API 7 Updates the details of a specific district based on the district ID
+PUT http://localhost:3000/districts/764
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwiaWF0IjoxNjg0Mjk2OTU5fQ.vQCDm6E0WunGe_fhkUniqugZ643AK4wLsh1GQ3L5Uqc
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+
+### API 8 Returns the statistics of total cases, cured, active, deaths of a specific state based on state ID
+GET http://localhost:3000/states/2/stats/ 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwiaWF0IjoxNjg0Mjk2OTU5fQ.vQCDm6E0WunGe_fhkUniqugZ643AK4wLsh1GQ3L5Uqc
+
